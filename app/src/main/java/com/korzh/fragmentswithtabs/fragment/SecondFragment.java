@@ -18,8 +18,6 @@ public class SecondFragment extends Fragment {
         return new SecondFragment();
     }
 
-    public SecondFragment() {
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

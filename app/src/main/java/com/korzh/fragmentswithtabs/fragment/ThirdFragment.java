@@ -17,9 +17,6 @@ public class ThirdFragment extends Fragment {
         return new ThirdFragment();
     }
 
-    public ThirdFragment() {
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

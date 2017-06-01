@@ -8,12 +8,16 @@ import com.korzh.fragmentswithtabs.fragment.FirstFragment;
 import com.korzh.fragmentswithtabs.fragment.SecondFragment;
 import com.korzh.fragmentswithtabs.fragment.ThirdFragment;
 
+import static com.korzh.fragmentswithtabs.general.Const.FIRST_FRAGMENT;
+import static com.korzh.fragmentswithtabs.general.Const.FRAGMENTS_COUNT;
+import static com.korzh.fragmentswithtabs.general.Const.SECOND_FRAGMENT;
+import static com.korzh.fragmentswithtabs.general.Const.THIRD_FRAGMENT;
+
 /**
  * Created by akorzh on 01.06.2017.
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-    private static final int FRAGMENT_COUNT = 3;
     private final String[] mTitles;
 
     public SectionsPagerAdapter(FragmentManager fm, String[] titles) {
@@ -24,11 +28,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
-            case 0:
+            case FIRST_FRAGMENT:
                 return FirstFragment.newInstance();
-            case 1:
+            case SECOND_FRAGMENT:
                 return SecondFragment.newInstance();
-            case 2: {
+            case THIRD_FRAGMENT: {
                 return ThirdFragment.newInstance();
             }
         }
@@ -37,7 +41,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return FRAGMENT_COUNT;
+        return FRAGMENTS_COUNT;
     }
 
     @Override

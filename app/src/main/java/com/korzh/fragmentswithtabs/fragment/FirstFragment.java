@@ -14,12 +14,8 @@ import com.korzh.fragmentswithtabs.R;
  */
 public class FirstFragment extends Fragment {
 
-
     public static FirstFragment newInstance() {
         return new FirstFragment();
-    }
-
-    public FirstFragment() {
     }
 
     @Override
