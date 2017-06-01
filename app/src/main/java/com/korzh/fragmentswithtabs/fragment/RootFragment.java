@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.korzh.fragmentswithtabs.R;
 import com.korzh.fragmentswithtabs.adapter.SectionsPagerAdapter;
+import com.korzh.fragmentswithtabs.view.DepthPageTransformer;
 
 /**
  * Created by akorzh on 01.06.2017.
@@ -48,6 +49,7 @@ public class RootFragment extends Fragment {
 
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.container);
         viewPager.setAdapter(sectionsPagerAdapter);
+        viewPager.setPageTransformer(true, new DepthPageTransformer());
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
